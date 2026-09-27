@@ -1,27 +1,48 @@
-# Pulse: Your Food’s Best Friend! 🌟
+# PulseAI
 
-Welcome to **Pulse**, the ultimate tool for making informed and smart food choices! 🚀 With Pulse, navigating dietary restrictions and understanding your food has never been easier. Here’s what makes Pulse a must-have:
+> A Tkinter desktop app for making dietary-aware food choices — search products and analyse ingredients through the Spoonacular API.
+
+## Stack
+
+- **Language:** Python 3
+- **GUI:** Tkinter / ttk
+- **Data & HTTP:** `requests`, `pandas`
+- **External API:** [Spoonacular](https://spoonacular.com/food-api)
+- **Storage:** local JSON (preferences) and CSV (search history)
+
+## Description
+
+Pulse helps users make eco-friendly and ethical food choices. You set your dietary
+preferences (Diabetic, Gluten-Free, Vegan, Halal, and more), then search real food products
+and analyse their ingredients so you can decide what fits your diet. Product data and
+ingredient analysis are pulled live from the Spoonacular API.
+
+> **Note:** this is an evolving prototype. The files `p1.py` … `p9.py` are successive
+> iterations of the app; **`p9.py` is the latest and most complete** (tabbed product search
+> with persistent history). The earlier scripts are the preference-selector prototypes kept
+> for history.
 
 ## Features
 
-- **Product Search Made Simple**: Quickly search for any food product by name and get all the details you need—brand, description, price, and more!
-- **Ingredient Insights**: Dive deep into the ingredients list with our powerful analysis, which helps identify any potential dietary issues or allergens.
-- **Clear and Friendly UI**: Enjoy a modern, user-friendly interface that makes searching and analyzing your food both fun and intuitive.
+- Dietary-preference selection with local persistence (`preferences.json`).
+- Live food-product search via the Spoonacular API.
+- Ingredient analysis for searched products.
+- Tabbed Tkinter UI (search + results) in the current build (`p9.py`).
+- Search history saved to `searched_products.csv`, with duplicate detection.
 
-## Dietary Restrictions Supported
+## How to Build / Run
 
-Pulse is designed to cater to a wide range of dietary preferences and needs, including:
-- **Diabetic-Friendly**: Find out if a product is suitable for managing blood sugar levels.
-- **Gluten-Free**: Ensure the product is safe for those with gluten intolerance or celiac disease.
-- **Vegan**: Confirm if the product aligns with a vegan diet.
-- **Vegetarian**: Check if the product meets vegetarian standards.
-- **Non-Alcoholic**: Perfect for those avoiding alcohol for personal or religious reasons.
-- **Lactose Intolerant**: Identify if the product contains lactose for those with lactose intolerance.
-- **Islamic Dietary Laws**: Ensure the product is free from pork and alcohol, adhering to halal requirements.
-- **Other Religious Restrictions**: Verify if the product meets various other dietary restrictions based on religious practices.
+1. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+2. Get a free API key from [Spoonacular](https://spoonacular.com/food-api) and set it in
+   `p9.py` (replace the `spoonacular_api_key` placeholder).
+3. Run the latest build:
+   ```bash
+   python p9.py
+   ```
 
-## Demo Status
+## License
 
-Please note that **Pulse** is currently in the demo stage. While you’re welcome to test and explore its features, keep in mind that this version is a prototype and may be unstable. We appreciate your patience and feedback as we continue to improve and refine the tool!
-
-Pulse is here to simplify your food choices and help you stay on track with your dietary goals. Say goodbye to food confusion and hello to a more informed you with Pulse! 🥳🍽️✨
+Released under the [MIT License](LICENSE).
