@@ -1,8 +1,9 @@
+import csv
+import os
 import requests
 import pandas as pd
 import tkinter as tk
 from tkinter import messagebox, scrolledtext, ttk
-import os
 
 
 spoonacular_api_key = 'your_spoonacular_api_key'

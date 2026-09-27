@@ -1,0 +1,10 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Local app data / secrets
+preferences.json
+searched_products.csv
+*.csv
